@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="clase2_faltante.js"></script> -->
+</head>
+<body>
+    <div class="elementoBase elemento1">Elemento 1</div>
+    <div class="elementoBase elemento2">Elemento 2</div>
+    <div class="elementoBase elemento3">Elemento 3</div>
+    <div class="elementoBase elemento4">Elemento 4</div>
+    <div id="elementoUnico" class="elementoBase elemento5">Elemento 5</div>
+    
+    <div>
+        <button onclick="guardarVariable('valor1')" >Local Storage guardar valor 1</button>
+        <button onclick="leerVariableGuardada('valor1')" >Local Storage Leer valor 1</button>
+        <button onclick="eliminarVariableGuardada('valor1')" >Local Storage Eliminar valor 1</button>
+        <button onclick="limpiarTodoLocalStorage()" >Local Storage Limpiar Todo</button>
+    </div>
+    <div>
+        <button onclick="guardarVariableSession('valor2')" >Session Storage guardar valor 1</button>
+        <button onclick="leerVariableGuardadaSession('valor2')" >Session Storage Leer valor 1</button>
+        <button onclick="eliminarVariableGuardadaSession('valor2')" >Session Storage Eliminar valor 1</button>
+        <button onclick="limpiarTodoSessionStorage()" >Session Storage Limpiar Todo</button>
+    </div>
+    <script src="clase3.js"></script>
+</body>
+</html>
