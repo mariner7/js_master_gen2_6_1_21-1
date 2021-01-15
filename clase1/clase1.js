@@ -13,8 +13,33 @@ var variable_undefined = undefined
 // var variable_number = new Number(-1)
 
 // Prototipos JS
-String
-Number
-Boolean
 
-var aaa = "La Magia de Javascript"
+// Number
+
+var numero = 1
+numero.toFixed(0) // 1
+numero.toFixed(1) // 1.0
+numero.toString() // "1"
+
+// Boolean
+
+Boolean(0)          // false
+Boolean('')         // false
+Boolean(null)       // false
+Boolean(undefined)  // false
+Boolean(1)          // true
+Boolean(-1)         // true
+Boolean(999)        // true
+Boolean('hola')     // true
+
+// String
+
+var texto = "La Magia de Javascript"
+texto.startsWith('La') // true
+texto.endsWith('Javascript') // true
+texto.indexOf('Magia') // 3
+texto.includes('Javascript') // true
+texto.toUpperCase() // "LA MAGIA DE JAVASCRIPT"
+texto.charAt(3) // M
+texto.replace('de', 'con') // "La Magia con Javascript"
+texto.concat(' en el código') // "La Magia con Javascript en el código"
