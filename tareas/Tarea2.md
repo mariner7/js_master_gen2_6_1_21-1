@@ -48,7 +48,7 @@ La tarea deben desarrollarla en su repositorio personal, si no saben ocupar git 
                 clientes: ['Facebook', 'Google'],
 
             }
-            gustos: ['comer', 'ver televisión']
+            gustos: ['comer', 'ver televisión', 'dormir']
             hijos: null,
             
         }
@@ -56,6 +56,6 @@ La tarea deben desarrollarla en su repositorio personal, si no saben ocupar git 
 
     Deben generar las siguientes funciones, **deben ocupar desestructuración**, todos los que estan en parentesis deben venir desde la información del objeto:
 
-    - Hacer una función que reciba el objeto `trabajador` y devuelva un mensaje: `El trabajador (Jhon Smith) trabaja en (ACME) con cargo (QA) y le gusta (ver televisión), (no tiene hijos)`
+    - Hacer una función que reciba el objeto `trabajador` y devuelva un mensaje: `El trabajador (Jhon Smith) trabaja en (ACME) con cargo (QA) y le gusta (comer) y (2) más, (no tiene hijos)`
 
     - Hacer una función que reciba el objeto `trabajador` y devuelva un mensaje: `El trabajador (Jhon Smith) va a su trabajo en (Santiago), es (QA), en el puesto (nº 24), trabaja con (Facebook) y (Google)`
