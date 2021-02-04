@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 9</title>
+    <link rel="stylesheet" href="clase9.css">
+    <script src="clase9.js"></script>
+    <script src="clase9-singleton.js"></script>
+    <script src="clase9-factory.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p>Prototipo</p>
+        <div id="prototipo">
+            <button onclick="fight()">Empezar pelea</button>
+            <div class="player">
+                <p id="player_1_name"></p>
+                <div class="meter">
+                    <span id="player_1_hp" style="width: 100%;"></span>
+                </div>
+            </div>
+            <div class="player">
+                <p id="player_2_name"></p>
+                <div class="meter">
+                    <span id="player_2_hp" style="width: 100%;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Singleton
+        <div id="singleton">
+        </div>
+    </div>
+    <div class="container">
+        <button onclick="createButton('red', 'soy un texto')">Crear boton</button>
+        Factory
+        <div id="factory">
+
+        </div>
+    </div>
+
+    <script>
+        const factory = new Factory();
+
+        const player1 = factory.createPlayer({ name: 'Link', type: 'arquero', playerNumber: 1 })
+        const player2 = factory.createPlayer({ name: 'Ganondorf', type: 'guerrero', playerNumber: 2 })
+
+        const fight = () => {
+            player1.calculateDamage();
+            player2.calculateDamage();
+
+            playerTimer = setTimeout(() => {
+                player1.doDamage(player2);
+                player2.doDamage(player1);
+
+                if (!player1.isDead() && !player2.isDead()) {
+                    fight();
+                }
+            }, 500)
+        }
+
+        const createButton = (color, text) => {
+            const button = factory.createButton({ color, text })
+            document.getElementById('factory').appendChild(button);
+        }
+    </script>
+</body>
+
+</html>
