@@ -32,15 +32,15 @@ No es obligatorio que lo completen pero les servirá para entender como funciona
    ```js
     const breads = ["bagette", "brioche", "pita", "marraqueta", "hallulla"]
    ```
-   - Ejemplo de resultado de la operación:
+   - Resultado de la operación para que puedan evaluar:
    ```js
    Result:
    {
-       bagette: 209,
-       brioche: 470,
-       pita: 521,
-       marraqueta: 600,
-       hallulla: 200,
+       hallulla: 335,
+       marraqueta: 438,
+       bagette: 628,
+       brioche: 257,
+       pita: 342
    }
    ```
    
