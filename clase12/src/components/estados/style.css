@@ -1,0 +1,23 @@
+.contador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.contador-texto {
+    font-size: 20px;
+}
+
+.textInputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.row {
+    flex-direction: row;
+    margin-top: 20px;
+}
