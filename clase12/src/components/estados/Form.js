@@ -6,15 +6,23 @@ class Form extends Component{
         super(props)
 
         this.state = {
-            name: 'Julio',
-            lastname: 'Orellana',
-            radioButton: 'No',
+            name: props.defaultName,
+            lastname: props.defaultLastname,
+            radioButton: props.defaultActive,
         }
     }
 
-    handleInputChange = ({type, value}) => this.setState({ [type]: value }) 
+    callback = () => {
+        const { onChange } = this.props;
+        
+        if(typeof onChange === 'function'){
+            onChange({...this.state})
+        }
+    }
 
-    handleRadioButton = (_, value) => this.setState({ radioButton: value})
+    handleInputChange = ({type, value}) => this.setState({ [type]: value }, this.callback) 
+
+    handleRadioButton = (_, value) => this.setState({ radioButton: value}, this.callback)
 
     render(){
         const { name, lastname, radioButton } = this.state;

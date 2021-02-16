@@ -2,14 +2,14 @@ import React, { Component} from 'react';
 import './style.css'
 import { Paper, Button } from '@material-ui/core'
 
-
 // stateful components
 class Contador extends Component {
 
     constructor(props){
         super(props)
+
         this.state = {
-            valorContador: 0,
+            valorContador: props.contadorInicial || 0,
         }
     }
 
@@ -20,6 +20,15 @@ class Contador extends Component {
     }
 
     componentDidUpdate(){
+    }
+
+    callback = () => {
+        const { onChange } = this.props;
+        const { valorContador } = this.state;
+
+        if(typeof onChange === 'function'){
+            onChange(valorContador)
+        }
     }
 
     shouldComponentUpdate(){
@@ -33,8 +42,7 @@ class Contador extends Component {
 
     sumarContador = () => {
         const { valorContador } = this.state;
-
-        this.setState({ valorContador:  valorContador + 1})
+        this.setState({ valorContador:  valorContador + 1},this.callback)
     }
 
     restarContador = () => {
@@ -44,12 +52,11 @@ class Contador extends Component {
             return
         }
 
-        this.setState({ valorContador:  valorContador - 1})
+        this.setState({ valorContador:  valorContador - 1}, this.callback)
     }
 
     render(){
         const { valorContador } = this.state;
-        console.log({ valorContador })
         return(
             <>
                 <h1>Contador</h1>

@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import Header from './components/headers/AppHeader'
 import { TabContext, TabList, TabPanel } from '@material-ui/lab'
 import { AppBar, Tab } from '@material-ui/core';
-import Contador from './components/estados/Contador'
-import Form from './components/estados/Form';
+import Estados from './screens/Estados';
+import Props from './screens/Props';
+import Fetch from './screens/Fetch';
 
 // stateless components
 function App() {
@@ -28,18 +29,20 @@ function App() {
             <Tab label="Inicio" value="1" />
             <Tab label="Estados" value="2" />
             <Tab label="Props" value="3" />
+            <Tab label="Fetch" value="4" />
           </TabList>
         </AppBar>
         <TabPanel value="1">
           <p>Inicio</p>
         </TabPanel>
         <TabPanel value="2">
-          <p>Estados</p>
-          <Contador />
-          <Form />
+          <Estados />
         </TabPanel>
         <TabPanel value="3">
-          <p>Props</p>
+          <Props/>
+        </TabPanel>
+        <TabPanel value="4">
+          <Fetch />
         </TabPanel>
       </TabContext>
     </div> 
