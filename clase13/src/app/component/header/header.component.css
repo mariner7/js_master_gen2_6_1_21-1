@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1d1d;
+    padding: 10px;
+}
+
+.icon {
+    width: 50px;
+}
+
+.title {
+    color: white;
+}
