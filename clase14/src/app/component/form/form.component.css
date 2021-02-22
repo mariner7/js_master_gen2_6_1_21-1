@@ -1,0 +1,25 @@
+.card {
+    margin: 20px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.data {
+    color: white;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.radiobutton {
+    display: flex;
+    flex-direction: column;
+}

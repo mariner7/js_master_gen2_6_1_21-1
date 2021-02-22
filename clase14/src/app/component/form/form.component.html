@@ -1,0 +1,24 @@
+<mat-card class="card">
+    <mat-card-content class="card-content">
+      <div style="color: white">
+        {{name}}
+        {{lastname}}
+        {{active}}
+      </div>
+      <div class="inputs">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input (blur)="nameChanged()" [(ngModel)]="name" matInput placeholder="Escribe un nombre">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Apellido</mat-label>
+          <input (blur)="lastnameChanged()" [(ngModel)]="lastname" matInput placeholder="Escribe un apellido">
+        </mat-form-field>
+        <label id="activo">Activo:</label>
+        <mat-radio-group (change)="activeChanged()" [(ngModel)]="active" class="radiobutton" aria-label="Activo">
+          <mat-radio-button [value]="true">Si</mat-radio-button>
+          <mat-radio-button [value]="false">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </mat-card-content>
+  </mat-card>

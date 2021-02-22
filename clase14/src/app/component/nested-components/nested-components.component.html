@@ -1,0 +1,14 @@
+<div>
+    <div>
+        Valor counter: {{counter}}
+        Valor nombre: {{name}}
+        Valor apellido: {{lastname}}
+        Valor activo: {{active}}
+    </div>
+    <app-data-binding [data]="counter" (onCounterChange)="counterChange($event)" ></app-data-binding>
+    <app-form 
+        (onNameChange)="newName($event)"
+        (onLastnameChange)="newLastname($event)"
+        (onActiveChange)="newActive($event)"
+    ></app-form>
+</div>
