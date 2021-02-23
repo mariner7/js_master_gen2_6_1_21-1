@@ -10,4 +10,5 @@ export class AppComponent {
   title1 = 'Home'
   title2 = 'Data Binding'
   title3 = 'Nested Components'
+  title4 = 'Fetch'
 }

@@ -1,0 +1,30 @@
+<mat-card class="card">
+    <mat-card-content class="card-content">
+        <div>
+            <button (click)='fetchCountries()' mat-raised-button color="primary">
+                {{buttonText}}
+            </button>
+        </div>
+
+        <div class="select" *ngIf="countries && countries.length">
+            <mat-form-field appearance="fill">
+                <mat-label>Países</mat-label>
+                <mat-select (selectionChange)="onSelectChange($event)">
+                    <mat-option
+                        *ngFor="let country of countries"
+                        [value]="country.Slug"
+                    >
+                        {{ country.Country }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div *ngIf="selectedCountryData && selectedCountryData.length">
+            <app-line-chart 
+                [chartData]="selectedCountryData"
+                [countryDataName]="currentCountrySlug"
+                ></app-line-chart>
+        </div>
+    </mat-card-content>
+</mat-card>
