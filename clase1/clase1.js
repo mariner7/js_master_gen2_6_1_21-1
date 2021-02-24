@@ -9,8 +9,21 @@ var variable_undefined = undefined
 // Lo que hace el Engine
 // var variable_string = "soy un texto"
 
+/** Internamente Javascript lo que hace es llamar
+** a un prototipo de tipo en base a la asignación
+** new String para textos
+** new Number para números
+** new Boolean para booleanos
+** undefined y null no son prototipos
+**/
+
+}
 // var variable_string = new String("soy un texto")
 // var variable_number = new Number(-1)
+// var variable_boolean = new Bool(false)
+//var variable_null = new Null() ERROR
+//var variable_undefined = new Undefined() ERROR
+
 
 // Prototipos JS
 
